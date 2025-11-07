@@ -25,15 +25,15 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       backgroundColor: AppColors.primary,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Icon(Icons.shield, size: 100, color: Colors.white),
-            const SizedBox(height: 24),
-            const Text(
+            SizedBox(height: 24),
+            Text(
               'AntiScam Shield',
               style: TextStyle(
                 fontSize: 28,
@@ -41,13 +41,13 @@ class _SplashScreenState extends State<SplashScreen> {
                 color: Colors.white,
               ),
             ),
-            const SizedBox(height: 8),
-            const Text(
+            SizedBox(height: 8),
+            Text(
               'AI-Powered Protection',
               style: TextStyle(fontSize: 16, color: Colors.white70),
             ),
-            const SizedBox(height: 48),
-            const CircularProgressIndicator(color: Colors.white),
+            SizedBox(height: 48),
+            CircularProgressIndicator(color: Colors.white),
           ],
         ),
       ),

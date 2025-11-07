@@ -181,10 +181,10 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
           Card(
             child: Column(
               children: [
-                ListTile(
-                  leading: const Icon(Icons.info_outline),
-                  title: const Text('Version'),
-                  subtitle: const Text('1.0.0'),
+                const ListTile(
+                  leading: Icon(Icons.info_outline),
+                  title: Text('Version'),
+                  subtitle: Text('1.0.0'),
                 ),
                 const Divider(height: 1),
                 ListTile(
