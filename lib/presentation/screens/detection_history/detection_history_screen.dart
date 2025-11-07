@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../core/constants/app_strings.dart';
-import '../../../core/widgets/loading_indicator.dart';
 import '../../widgets/empty_state.dart';
-import '../../widgets/error_view.dart';
 import '../../providers/detection_provider.dart';
 import 'widgets/detection_list_item.dart';
 import 'widgets/call_detection_list_item.dart';
@@ -83,7 +81,7 @@ class _DetectionHistoryScreenState extends ConsumerState<DetectionHistoryScreen>
     );
 
     if (detections.isEmpty) {
-      return EmptyState(
+      return const EmptyState(
         icon: Icons.check_circle,
         title: AppStrings.noThreatsTitle,
         subtitle: AppStrings.noThreatsSubtitle,
@@ -155,7 +153,7 @@ class _DetectionHistoryScreenState extends ConsumerState<DetectionHistoryScreen>
     );
 
     if (detections.isEmpty) {
-      return EmptyState(
+      return const EmptyState(
         icon: Icons.phone_disabled,
         title: AppStrings.noCallsTitle,
         subtitle: AppStrings.noCallsSubtitle,

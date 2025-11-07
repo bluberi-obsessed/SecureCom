@@ -36,9 +36,8 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                   },
                   secondary: Icon(
                     Icons.shield,
-                    color: settings.protectionEnabled
-                        ? Colors.green
-                        : Colors.grey,
+                    color:
+                        settings.protectionEnabled ? Colors.green : Colors.grey,
                   ),
                 ),
                 const Divider(height: 1),
@@ -59,8 +58,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                           Expanded(
                             child: _SensitivityButton(
                               label: AppStrings.sensitivityLow,
-                              isSelected:
-                                  settings.sensitivityLevel ==
+                              isSelected: settings.sensitivityLevel ==
                                   SensitivityLevel.low,
                               onTap: () {
                                 ref
@@ -73,8 +71,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                           Expanded(
                             child: _SensitivityButton(
                               label: AppStrings.sensitivityMedium,
-                              isSelected:
-                                  settings.sensitivityLevel ==
+                              isSelected: settings.sensitivityLevel ==
                                   SensitivityLevel.medium,
                               onTap: () {
                                 ref
@@ -87,8 +84,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                           Expanded(
                             child: _SensitivityButton(
                               label: AppStrings.sensitivityHigh,
-                              isSelected:
-                                  settings.sensitivityLevel ==
+                              isSelected: settings.sensitivityLevel ==
                                   SensitivityLevel.high,
                               onTap: () {
                                 ref
@@ -234,9 +230,9 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
     return Text(
       title,
       style: Theme.of(context).textTheme.titleMedium?.copyWith(
-        fontWeight: FontWeight.bold,
-        color: Theme.of(context).colorScheme.primary,
-      ),
+            fontWeight: FontWeight.bold,
+            color: Theme.of(context).colorScheme.primary,
+          ),
     );
   }
 

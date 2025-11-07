@@ -5,7 +5,10 @@ import '../../../../core/constants/app_colors.dart';
 class WeeklyActivityChart extends StatelessWidget {
   final Map<String, int> data;
 
-  const WeeklyActivityChart({super.key, required this.data});
+  const WeeklyActivityChart({
+    super.key,
+    required this.data,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +23,7 @@ class WeeklyActivityChart extends StatelessWidget {
               maxY: _getMaxY(),
               barTouchData: BarTouchData(
                 touchTooltipData: BarTouchTooltipData(
-                  getTooltipColor: (group) => Colors.grey[800]!,
+                  tooltipBgColor: Colors.grey[800]!,
                   getTooltipItem: (group, groupIndex, rod, rodIndex) {
                     return BarTooltipItem(
                       '${rod.toY.toInt()} threats',
@@ -66,8 +69,9 @@ class WeeklyActivityChart extends StatelessWidget {
                     showTitles: true,
                     reservedSize: 30,
                     getTitlesWidget: (value, meta) {
-                      if (value == meta.max || value == 0)
+                      if (value == meta.max || value == 0) {
                         return const Text('');
+                      }
                       return Text(
                         value.toInt().toString(),
                         style: const TextStyle(fontSize: 10),
@@ -81,7 +85,10 @@ class WeeklyActivityChart extends StatelessWidget {
                 drawVerticalLine: false,
                 horizontalInterval: 2,
                 getDrawingHorizontalLine: (value) {
-                  return FlLine(color: Colors.grey[300]!, strokeWidth: 1);
+                  return FlLine(
+                    color: Colors.grey[300]!,
+                    strokeWidth: 1,
+                  );
                 },
               ),
               borderData: FlBorderData(show: false),
@@ -120,8 +127,12 @@ class WeeklyActivityChart extends StatelessWidget {
   }
 
   Color _getBarColor(double value) {
-    if (value > 7) return AppColors.danger;
-    if (value > 4) return AppColors.suspicious;
+    if (value > 7) {
+      return AppColors.danger;
+    }
+    if (value > 4) {
+      return AppColors.suspicious;
+    }
     return AppColors.primary;
   }
 }

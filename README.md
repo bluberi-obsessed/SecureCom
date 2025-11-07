@@ -229,7 +229,6 @@ This project is licensed under the MIT License - see LICENSE file for details.
 
 For issues and questions:
 - Email: support@securecom.app
-- GitHub Issues: [Create Issue](https://github.com/yourrepo/securecom/issues)
 
 ## Acknowledgments
 
