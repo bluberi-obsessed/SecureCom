@@ -205,11 +205,10 @@ flutter pub run build_runner watch --delete-conflicting-outputs
 - [x] Call detection UI
 - [x] Settings management
 - [ ] Backend API integration
-- [ ] AI model training (Huawei ModelArts)
+- [ ] AI model training (BERT-tiny)
 - [ ] Real-time SMS interception
-- [ ] Call audio transcription (Huawei SIS)
+- [ ] Call audio transcription (Google Speech-to-Text)
 - [ ] Cloud intelligence sync
-- [ ] User authentication
 
 ## Contributing
 
@@ -221,21 +220,13 @@ Contributions are welcome! Please follow these steps:
 4. Push to branch (`git push origin feature/AmazingFeature`)
 5. Open Pull Request
 
-## License
-
-This project is licensed under the MIT License - see LICENSE file for details.
-
 ## Support
 
 For issues and questions:
-- Email: support@securecom.app
+- Email:
+-   qarsantos02@tip.edu.ph
+-   qhamanuel@tip.edu.ph
+-   qmjkegob@tip.edu.ph
 
-## Acknowledgments
-
-- Flutter Team for the amazing framework
-- Riverpod for elegant state management
-- All contributors and testers
-
----
 
 **Made with ❤️ by the SecureCom Team**
