@@ -220,6 +220,9 @@ Contributions are welcome! Please follow these steps:
 4. Push to branch (`git push origin feature/AmazingFeature`)
 5. Open Pull Request
 
+## Model (Too large for GitHub)
+https://drive.google.com/drive/folders/13kFkpjBmDtcxkK2XVPmjuD_Ql2vrmPYa?usp=sharing
+
 ## Support
 
 For issues and questions, email:
