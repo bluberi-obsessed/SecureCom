@@ -222,11 +222,10 @@ Contributions are welcome! Please follow these steps:
 
 ## Support
 
-For issues and questions:
-- Email:
+For issues and questions, email:
 -   qarsantos02@tip.edu.ph
 -   qhamanuel@tip.edu.ph
 -   qmjkegob@tip.edu.ph
 
 
-**Made with ❤️ by the SecureCom Team**
+**Made with ❤️ by the SMGyupsal Team**
