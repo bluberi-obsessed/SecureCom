@@ -2,6 +2,13 @@
 
 SecureCom is an AI-driven mobile application that identifies and blocks smishing (SMS phishing) and vishing (voice phishing) attacks in real-time on Android devices.
 
+# Google Drive Link of Prototype Video
+https://drive.google.com/drive/folders/15P3v2yMIQmAtSPdY8zMQgd9ZZrXyIJbc?usp=sharing
+
+# Pitch Deck 
+https://docs.google.com/presentation/d/1bh3xu4E6oUvEdnKnGBfooGfmDxkj7JyfnXS8lXLJ4N4/edit?usp=sharing
+
+
 ## Features
 
 ✨ **Real-time Protection**
