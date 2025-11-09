@@ -1,4 +1,4 @@
-# SecureCom - AI-Powered Anti-Scam Protection
+# SecureCom - AI-Powered Protection System for Smishing and Vishing
 
 SecureCom is an AI-driven mobile application that identifies and blocks smishing (SMS phishing) and vishing (voice phishing) attacks in real-time on Android devices.
 
