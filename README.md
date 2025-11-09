@@ -50,17 +50,58 @@ securecom/
 ├── assets/                          # Images, animations
 └── test/                            # Unit tests
 ```
+## Installation
+
+### 1. Clone/Download Project
+```powershell
+# Windows
+cd C:\Projects
+# Extract securecom.zip or clone repository
+cd securecom
+```
+
+### 2. Install Dependencies
+```powershell
+flutter pub get
+```
+
+### 3. Generate Code
+```powershell
+flutter pub run build_runner build --delete-conflicting-outputs
+```
+
+### 4. Run Application
+
+**Option A: Using Android Studio**
+1. Open project in Android Studio
+2. Select emulator or connected device
+3. Click Run button (or press Shift+F10)
+
+**Option B: Command Line**
+```powershell
+# Start emulator (if not running)
+emulator -avd Pixel_6_Pro_API_34
+
+# In new terminal
+flutter run
+```
+
+**Option C: VS Code**
+1. Open project folder
+2. Press F5 or click Run > Start Debugging
+
+
 
 ## Roadmap
 
-- [ ] Mock data implementation
-- [ ] SMS detection UI
-- [ ] Call detection UI
-- [ ] Settings management
-- [ ] Backend API integration
-- [ ] AI model training (BERT-tiny)
+- [X] Mock data implementation
+- [X] SMS detection UI
+- [X] Call detection UI
+- [X] Settings management
+- [X] Backend API integration
+- [X] AI model training (BERT-tiny) --- Model is yet to be connected to the UI
 - [ ] Real-time SMS interception
-- [ ] Call audio transcription (Google Speech-to-Text)
+- [ ] Call audio transcription
 - [ ] Cloud intelligence sync
 
 ## Model (Too large for GitHub)
