@@ -5,75 +5,18 @@ SecureCom is an AI-driven mobile application that identifies and blocks smishing
 ## Features
 
 ✨ **Real-time Protection**
-- SMS message scanning and threat detection
-- Call monitoring and vishing identification
-- AI-powered semantic analysis
+- Intercepts SMS and call events instantly
+- Flags suspicious content using AI-powered semantic analysis
+- Displays sender, message, and detection reason in detail view
+- Timestamped threat logs with full date and time (e.g., “Nov 9, 2025 at 2:45 PM”)
 
 📊 **Comprehensive Dashboard**
-- Threat level indicators
-- Weekly activity charts
-- Detailed detection history
-
-⚙️ **Customizable Settings**
-- Adjustable sensitivity levels
-- Whitelist management
-- Privacy controls
-
-🔒 **Privacy-Focused**
-- Local processing
-- Anonymized cloud learning
-- User data control
-
-## Screenshots
-
-*Coming soon*
-
-## Prerequisites
-
-- Windows 10/11 (with WSL2) or Linux
-- Flutter SDK 3.16+
-- Android Studio with Android SDK
-- Android Emulator or Physical Device (API 26+)
-
-## Installation
-
-### 1. Clone/Download Project
-```powershell
-# Windows
-cd C:\Projects
-# Extract securecom.zip or clone repository
-cd securecom
-```
-
-### 2. Install Dependencies
-```powershell
-flutter pub get
-```
-
-### 3. Generate Code
-```powershell
-flutter pub run build_runner build --delete-conflicting-outputs
-```
-
-### 4. Run Application
-
-**Option A: Using Android Studio**
-1. Open project in Android Studio
-2. Select emulator or connected device
-3. Click Run button (or press Shift+F10)
-
-**Option B: Command Line**
-```powershell
-# Start emulator (if not running)
-emulator -avd Pixel_6_Pro_API_34
-
-# In new terminal
-flutter run
-```
-
-**Option C: VS Code**
-1. Open project folder
-2. Press F5 or click Run > Start Debugging
+- Color-coded threat cards:
+-   🟥 Red for blocked threats
+-   🟧 Orange for suspicious (unblocked)
+-   🟩 Green for legitimate messages
+- Weekly summary with threat counts and activity trends
+- Suspicious vs Blocked stats with live updates
 
 ## Project Structure
 ```
@@ -101,114 +44,20 @@ securecom/
 └── test/                            # Unit tests
 ```
 
-## Architecture
-
-SecureCom follows **Clean Architecture** principles:
-
-- **Presentation Layer**: Flutter UI with Riverpod state management
-- **Domain Layer**: Business logic and entities
-- **Data Layer**: Repositories, data sources (Mock & API)
-
-### Key Technologies
-
-- **Flutter**: Cross-platform UI framework
-- **Riverpod**: State management
-- **Freezed**: Immutable data models
-- **Dio**: HTTP client (ready for backend)
-- **fl_chart**: Data visualization
-- **Hive**: Local database
-
-## Mock Data
-
-The app currently uses **realistic mock data** with:
-- 20+ SMS scam examples (Filipino context)
-- 10+ call scam examples
-- Confirmed scams, suspicious, and legitimate messages
-- Real-world scam patterns (bank phishing, delivery scams, etc.)
-
-## Backend Integration (Coming Soon)
-
-To switch from mock data to real backend:
-
-1. **Update Repository Provider** in `lib/presentation/providers/detection_provider.dart`:
-```dart
-final detectionRepositoryProvider = Provider<DetectionRepository>((ref) {
-  // Change this line:
-  // return MockDetectionRepository(); // Current
-  return ApiDetectionRepository(ApiClient()); // Production
-});
-```
-
-2. **Configure API Client** in `lib/data/data_sources/remote/api_client.dart`:
-   - Update `baseUrl` to your backend URL
-   - Add authentication tokens
-
-## Troubleshooting
-
-### Build Errors
-```powershell
-# Clean and rebuild
-flutter clean
-flutter pub get
-flutter pub run build_runner clean
-flutter pub run build_runner build --delete-conflicting-outputs
-```
-
-### Emulator Not Detected
-```powershell
-# Check devices
-flutter devices
-adb devices
-
-# Restart ADB
-adb kill-server
-adb start-server
-```
-
-### WSL Issues
-```bash
-# In WSL terminal
-export ADB_SERVER_SOCKET=tcp:127.0.0.1:5037
-flutter devices
-```
-
-### Missing Generated Files
-```powershell
-# Ensure build_runner completes successfully
-flutter pub run build_runner build --delete-conflicting-outputs --verbose
-```
-
-## Development
-
-### Adding New Features
-
-1. Create data models in `lib/data/models/`
-2. Add mock data in `lib/data/data_sources/mock/`
-3. Create providers in `lib/presentation/providers/`
-4. Build UI in `lib/presentation/screens/`
-
-### Running Tests
-```powershell
-flutter test
-```
-
-### Code Generation
-```powershell
-# Watch mode (auto-regenerate on save)
-flutter pub run build_runner watch --delete-conflicting-outputs
-```
-
 ## Roadmap
 
-- [x] Mock data implementation
-- [x] SMS detection UI
-- [x] Call detection UI
-- [x] Settings management
+- [ ] Mock data implementation
+- [ ] SMS detection UI
+- [ ] Call detection UI
+- [ ] Settings management
 - [ ] Backend API integration
 - [ ] AI model training (BERT-tiny)
 - [ ] Real-time SMS interception
 - [ ] Call audio transcription (Google Speech-to-Text)
 - [ ] Cloud intelligence sync
+
+## Model (Too large for GitHub)
+https://drive.google.com/drive/folders/13kFkpjBmDtcxkK2XVPmjuD_Ql2vrmPYa?usp=sharing
 
 ## Contributing
 
@@ -220,8 +69,6 @@ Contributions are welcome! Please follow these steps:
 4. Push to branch (`git push origin feature/AmazingFeature`)
 5. Open Pull Request
 
-## Model (Too large for GitHub)
-https://drive.google.com/drive/folders/13kFkpjBmDtcxkK2XVPmjuD_Ql2vrmPYa?usp=sharing
 
 ## Support
 
